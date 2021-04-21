@@ -5,11 +5,13 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class MyPanel extends JPanel implements ActionListener {
-    final int panelLungime =1900;
+    final int panelLungime =1920;
     final int panelInaltime =300;
     Image imagine;
     Timer timer;
-    int xVelocity = 30;
+    int xVelocity = 10;
+    int yVelocity = 10;
+
     int x=0;
     int y=0;
 
@@ -34,7 +36,12 @@ public class MyPanel extends JPanel implements ActionListener {
         {
             xVelocity=xVelocity * (-1);
         }
+//        if (y>=panelInaltime-imagine.getWidth(this)|| y<0)
+//        {
+//            yVelocity=yVelocity * (-1);
+//        }
     x=x+xVelocity;
+//        y=y+yVelocity;
     repaint();
     }
 }
